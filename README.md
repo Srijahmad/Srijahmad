@@ -40,3 +40,74 @@ class Bot(BaseBot):
                 emote_id = random.choice(self.dancs)
                 await self.highrise.send_emote(emote_id, user.id)
             except:
+                print(f"{emote_id}")
+
+        if "نزلني" in message:
+            try:
+                await self.highrise.teleport(f"{user.id}", Position(10, 0, 5))
+            except:
+                print("error 3")
+
+        if "صعدني" in message:
+            try:
+                await self.highrise.teleport(f"{user.id}", Position(2, 11, 4))
+            except:
+                print("error 3")
+
+        if "مرجحني" in message or "fly" in message:
+            try:
+                kl = Position(random.randint(1, 19), random.randint(1, 15), random.randint(1, 19))
+                await self.highrise.teleport(f"{user.id}", kl)
+            except:
+                print("error 3")
+
+        if "وقت موتي" in message:
+            death_year = random.randint(2023, 2100)
+            await self.highrise.chat(f"سيكون وقت موتك في عام: {death_year}")
+
+        if "نسبة الحب" in message:
+            love_percentage = random.randint(1, 100)
+            await self.highrise.chat(f"نسبة الحب لديك هي: {love_percentage}%")
+
+        if "نسبة كرهي" in message:
+            hate_percentage = random.randint(1, 100)
+            await self.highrise.chat(f"نسبة الكره لديك هي: {hate_percentage}%")
+          
+            response = random.choice(["الجنة", "النار"])
+            await self.highrise.chat(response)
+
+    async def on_channel(self, sender_id: str, message: str, tags: set[str]) -> None:
+        """On a hidden channel message."""
+        pass
+
+    async def on_user_move(self, user: User, pos: Position) -> None:
+        """On a user moving in the room."""
+        if user.username == "_AnGeL_":
+            await self.highrise.send_emote('idle-hero')
+            print(pos)
+            # التعامل مع حالة عدم وجود نص في pos
+            facing = pos.facing
+            print(type(pos))
+            x = pos.x
+            y = pos.y
+            z = pos.z
+            facing = pos.facing
+            await self.highrise.walk_to(Position(x - 1, y, z - 1, facing))
+            print(user.username, pos)
+        pass
+
+    async def is_admin(self, user: User):
+        if user.id == self.BOT_ADMINISTRATOR_ID and user.username == self.BOT_ADMINISTRATOR:
+            return True
+        if user.id == '63f3de01870f670533de240e' and user.username == '60W':
+            return True
+        return False
+
+    async def run(self, room_id, token) -> None:
+        await __main__.main(self, room_id, token)
+
+
+if __name__ == "__main__":
+    room_id = "6606706410164331a110d95c"
+    token = "955a553cb001bea8f439214816b528b5494b25b949d71a0cbd32d02030a8150c"
+    arun(Bot().run(room_id, token))
