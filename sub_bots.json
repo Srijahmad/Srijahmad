@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "token": "1ca328a8e8bb977089b6cc49e93f0539cf34a56bf5abfbe6f6fb79fd0f9cbcb1",
+    "username": "bot_11d",
+    "status": "available",
+    "room_id": null,
+    "buyer": null,
+    "expires_at": null,
+    "buyer_id": null,
+    "remaining_seconds": null
+  },
+  {
+    "id": 2,
+    "token": "49789c8a970e31d8c0935a7e97708b38d32c9e5118451a88546a0e34f1513eac",
+    "username": "_king_man_3",
+    "status": "available",
+    "room_id": null,
+    "buyer": null,
+    "expires_at": null,
+    "buyer_id": null,
+    "remaining_seconds": null
+  },
+  {
+    "id": 3,
+    "token": "",
+    "status": "available",
+    "room_id": null,
+    "buyer": null,
+    "expires_at": null
+  },
+  {
+    "id": 4,
+    "token": "",
+    "status": "available",
+    "room_id": null,
+    "buyer": null,
+    "expires_at": null
+  },
+  {
+    "id": 5,
+    "token": "",
+    "status": "available",
+    "room_id": null,
+    "buyer": null,
+    "expires_at": null
+  },
+  {
+    "id": 6,
+    "token": "",
+    "status": "available",
+    "room_id": null,
+    "buyer": null,
+    "expires_at": null
+  },
+  {
+    "id": 7,
+    "token": "",
+    "status": "available",
+    "room_id": null,
+    "buyer": null,
+    "expires_at": null
+  },
+  {
+    "id": 8,
+    "token": "",
+    "status": "available",
+    "room_id": null,
+    "buyer": null,
+    "expires_at": null
+  },
+  {
+    "id": 9,
+    "token": "",
+    "status": "available",
+    "room_id": null,
+    "buyer": null,
+    "expires_at": null
+  },
+  {
+    "id": 10,
+    "token": "",
+    "status": "available",
+    "room_id": null,
+    "buyer": null,
+    "expires_at": null
+  }
+]
